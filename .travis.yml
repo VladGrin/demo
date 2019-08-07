@@ -2,5 +2,4 @@ language: java
 jdk: oraclejdk9
 
 install: true
-script: mvn clean install
-
+script: ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
