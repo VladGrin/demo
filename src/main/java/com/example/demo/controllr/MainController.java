@@ -22,4 +22,9 @@ public class MainController {
     public String helloBob() {
         return "HELLO Bob!!!";
     }
+
+    @GetMapping("/max")
+    public String helloMax() {
+        return "HELLO Max!!!";
+    }
 }
