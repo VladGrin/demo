@@ -1,6 +1,7 @@
 package com.example.demo.controllr;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,5 +27,10 @@ public class MainController {
     @GetMapping("/max")
     public String helloMax() {
         return "HELLO Max!!!";
+    }
+
+    @GetMapping("/{name}")
+    public String helloName(@PathVariable("name") String name) {
+        return "HELLO " + name + "!!!";
     }
 }
